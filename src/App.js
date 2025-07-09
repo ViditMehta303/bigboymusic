@@ -7,12 +7,16 @@ import Library from './screens/library/library';
 import Player from './screens/player/player';
 import Trending from './screens/trending/trending';
 import Home from './screens/home/home';
+import Sidebar from './components/sidebar/indexside';
 
 function App() {
   return (
     <div className="app-container">
+    
       
       <main className="main-content">
+        <Sidebar />
+        
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/fav" element={<Fav />} />
@@ -20,6 +24,7 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/player" element={<Player />} />
           <Route path="/trending" element={<Trending />} />
+          
         </Routes>
       </main>
       
